@@ -1,28 +1,21 @@
-document.querySelector(".btn").addEventListener("click", function () {
-  document.querySelector(".title").textContent = "제목아니다.";
+// 1. 컨테이너를 가져온다
+// 2. 클릭 이벤트가 발생한 요소가 박스 클래스가 있는지 확인하고
+// 3. 확인을 거치고 박스가 있다면 클래스명을 있다면 때주고 없으면 붙여줌. toggle
+
+const container = document.querySelector("#container");
+
+container.addEventListener("click", (e) => {
+  console.log(e);
+  if (e.target.classList.contains("box")) {
+    e.target.classList.toggle("clicked");
+  }
 });
 
-// 1. 문제 3) 함수
-sum(5, 7);
-
-function sum(num1, num2) {
-  console.log(num1 + num2);
+// 2번
+function getSquare(number) {
+  // number의 제곱을 계산하여 반환하는 함수를 작성하세요.
+  return number ** 2;
 }
 
-// 2. 문제 4) 조건문
-isEvenOrOdd(10);
-
-function isEvenOrOdd(num) {
-  if (num % 2 === 0) {
-    console.log("짝수입니다");
-  } else {
-    console.log("홀수입니다.");
-  }
-}
-
-// 3. 문제 5) 변수
-let name = "병수";
-let age = 20;
-
-console.log("이름 :", name);
-console.log("나이 :", age);
+const result = getSquare(5);
+console.log(result); // 25 출력 (5의 제곱)
