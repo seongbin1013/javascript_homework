@@ -52,6 +52,11 @@ const plusAge = lists.map((age) => {
 });
 
 console.log(plusAge);
+console.log(
+  lists.map((age) => {
+    return age.나이;
+  })
+);
 
 // 문제 6.
 const arrange = [...lists].sort((a, b) => {
